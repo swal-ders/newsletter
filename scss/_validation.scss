@@ -1,0 +1,84 @@
+.validation-wrapper{
+    grid-area: wrapper;
+    .thank-you{
+        color: #2B2B2B;
+        grid-area: title;
+        font-size: 300%;
+        margin: 0 auto;
+        font-family: 'Work Sans', sans-serif;
+        padding-bottom: 5%;
+    }
+    p{
+        color: #2B2B2B;
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+    }
+    .alert{
+        .jb-alert{
+            strong{
+                font-family: 'Work Sans', sans-serif;
+            }
+            ul{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 5%;
+                list-style-type: disc;
+                li{
+                    margin-bottom: 2%;
+                }
+            }
+        }
+    }
+    ul{
+        list-style-type: disc;
+        font-family: 'Roboto', sans-serif;
+        margin: 5% 0 5% 5%;
+    }
+    .gallery {
+        grid-area: gallery;
+        display: flex;
+        margin-top: 15%;
+        .large{
+            width: 60%;
+            border-right: solid white 5px;
+
+            img{
+                object-fit: cover;
+                overflow: hidden;
+                height: 100%;
+                width: 100%;        
+            }
+        }
+
+        .column {
+            height: 100%;
+            width: 40%;
+    
+            .medium{
+                height: 60%;
+                border-bottom: solid white 5px;
+
+                img{
+                    object-fit: cover;
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;   
+                }
+            }
+            .small{
+                height: 40%;
+                img{
+                    object-fit: cover;
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;  
+                }
+            }
+        }
+        img{
+            transition: transform .2s;
+        }
+        .image1:hover, .image2:hover, .image3:hover{
+            transform: scale(1.01);
+        }
+    }
+}

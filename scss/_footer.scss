@@ -1,0 +1,123 @@
+footer{
+    margin-top: 5%;
+    grid-area: footer;
+    background-color: #666465;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr .25fr;
+    grid-template-areas: 
+    'products   resources   company     social'
+    'contact    contact     terms       terms';
+    padding: 5%;
+    grid-row-gap: 15%;
+    nav .title {
+        color: white;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 125%;
+        padding-bottom: 5%;
+    }
+    nav ul li, .contact .contact-info {
+        padding-bottom: 2.5%;
+        a,
+        .terms p a{
+            color: #bdb9ba;
+            font-family: 'Roboto', sans-serif;
+            font-size: 75%;  
+        }
+        a:hover,
+        a:active{
+            text-decoration: none;
+            color: #D9CDAF;
+        }
+        i{
+            font-size: 200%;
+            margin-right: 10%;
+        }
+    }
+    .contact-info{
+        font-size: 100%;
+    }
+    .terms p a:hover,
+    .terms p a:active{
+        text-decoration: none;
+        color: #D9CDAF;
+    }
+    .products{
+        grid-area: products;
+        margin: 0 auto;
+    }
+    .resources{
+        grid-area: resources;
+        margin: 0 auto;
+    }
+    .company{
+        grid-area: company;
+        margin: 0 auto;
+    }
+    .social-media{
+        grid-area: social;
+        margin: 0 auto;
+    }
+    .contact {
+        grid-area: contact;
+        margin: auto;
+        .contact-info{
+            color: #bdb9ba;
+            font-family: 'Roboto', sans-serif;
+            font-size: 75%;
+        }
+    }
+    .terms {
+        grid-area: terms;
+        margin: auto;
+       p a {
+            grid-area: terms;
+            color: #bdb9ba;
+            font-family: 'Roboto', sans-serif;
+            font-size: 75%;
+        }
+        p a:hover,
+        p a:active,{
+            text-decoration: none;
+            color: #D9CDAF;
+        }
+    }
+}
+@media (max-width: 1025px){
+    footer{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        '.      resources       social          .'
+        '.      products        company         .'
+        'contact    contact     terms       terms';
+        grid-row-gap: 10%;
+    }
+}
+@media (max-width: 875px){
+    footer{
+        margin-top: 10%;
+    }
+}
+@media (max-width: 600px){
+    footer{
+        grid-template-columns: .25fr 1fr 1fr .25fr;
+        grid-template-rows: 1fr 1fr .25fr;
+        grid-template-areas: 
+        '.      resources       social          .'
+        '.      products        company         .'
+        'contact    contact     terms       terms';
+        grid-row-gap: 10%;
+    }
+}
+@media (max-width: 370px){
+    footer{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr 1fr .25fr;
+        grid-template-areas: 
+        ' resources       social '
+        ' products        company '
+        ' contact         terms';
+        grid-row-gap: 10%;
+    }
+}

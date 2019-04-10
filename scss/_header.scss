@@ -1,0 +1,178 @@
+.top-content{
+    grid-area: header;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+    'nav'
+    'banner'
+    'alert';
+    .nav-container {
+        padding: 10px;
+        cursor: pointer;
+        background-color: white;
+        .hamburger-button{
+            max-width: 35px;
+            display: subscribe;
+            .bar1, .bar2, .bar3 {
+                width: 35px;
+                height: 5px;
+                background-color: #333;
+                margin: 6px 0;
+                border-radius: 15%;
+              }
+        }      
+         nav ul {
+            display: none;
+        }
+    }
+    .change {
+         nav ul {
+            display: flex;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            list-style: none;
+            transition: 0.4s;
+            li a {
+                width: auto;
+                color: #2B2B2B;
+                font-family: 'Work Sans', sans-serif;
+                font-size: 200%;
+                padding: 10px;
+                margin: auto;
+                text-shadow: .5px .5px #666465;
+                transition: 0.5s;
+                opacity: 1;
+                visibility: visible;
+
+            }
+        }
+    }
+    .alert {
+        margin: 0;
+        text-align: center;
+        span.jb-alert{
+            font-family: 'Work Sans', sans-serif;    
+        }
+    }
+    .header-image-container{
+        position: relative;
+        grid-area: banner;
+        background-image: url("../images/chris-lawton-city.jpeg");
+        background-size: cover;
+        width: 100%;
+        min-height: 600px;
+        min-width: 320px;
+        border-top: #2B2B2B 1px solid;
+        .title-quip{
+            position: absolute;
+            top: 15%;
+            left: 2.5%;
+            p{
+                font-family: 'Work Sans', sans-serif;
+                font-size: 600%;
+                text-shadow: 3px 3px #666465;
+                color: white;
+            }
+        }
+    }
+}
+@media (max-width: 1200px){
+    .top-content{   
+        .header-image-container{
+
+            min-height: 400px;
+    
+        }
+    }
+}
+@media (max-width: 1068px){
+    .top-content{
+        .header-image-container{
+            .title-quip{
+                p{
+                    font-family: 'Work Sans', sans-serif;
+                    font-size: 550%;
+                    text-shadow: 3px 3px #666465;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 818px){
+    .top-content{
+        .header-image-container{
+            .title-quip{
+                p{
+                    font-size: 500%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 745px){
+    .top-content{ 
+        .header-image-container{
+            min-height: 300px;
+        }
+    }
+}
+@media (max-width: 725px){
+    .top-content{    
+        .header-image-container{ 
+            .title-quip{
+                 p{
+                    font-family: 'Work Sans', sans-serif;
+                    font-size: 450%;
+                    text-shadow: 3px 3px #666465;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 650px){
+    .top-content{      
+        .header-image-container{  
+            .title-quip{  
+                p{
+                    font-family: 'Work Sans', sans-serif;
+                    font-size: 400%;
+                    text-shadow: 3px 3px #666465;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px){
+    .top-content{      
+        .header-image-container{
+            min-height: 200px;   
+        }
+
+        .change {
+            nav ul {
+                position: static;
+               display: block;
+           }
+       }
+    }
+}
+@media (max-width: 575px){
+    .top-content{
+        .header-image-container{
+            .title-quip{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 400px){
+    .top-content{      
+        .header-image-container{
+            min-height: 150px;    
+        }
+    }
+}

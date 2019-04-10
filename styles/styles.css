@@ -1,0 +1,583 @@
+/* CSS Document */
+/* Eric Meyer Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Box Sizing Reset */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Responsive Images Reset */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header" ".      wrapper   .  " "footer footer footer";
+  grid-row-gap: 2.5%;
+}
+
+@media (max-width: 1036px) {
+  body {
+    grid-template-columns: 0.25fr 1fr 0.25fr;
+    grid-template-areas: "header header header" ".      wrapper   .  " "footer footer footer";
+  }
+}
+@media (max-width: 635px) {
+  body {
+    grid-template-columns: 0.05fr 1fr 0.05fr;
+    grid-template-areas: "header header header" ".      wrapper   .  " "footer footer footer";
+  }
+}
+.top-content {
+  grid-area: header;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "nav" "banner" "alert";
+}
+.top-content .nav-container {
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+}
+.top-content .nav-container .hamburger-button {
+  max-width: 35px;
+  display: subscribe;
+}
+.top-content .nav-container .hamburger-button .bar1, .top-content .nav-container .hamburger-button .bar2, .top-content .nav-container .hamburger-button .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  border-radius: 15%;
+}
+.top-content .nav-container nav ul {
+  display: none;
+}
+.top-content .change nav ul {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  list-style: none;
+  transition: 0.4s;
+}
+.top-content .change nav ul li a {
+  width: auto;
+  color: #2B2B2B;
+  font-family: "Work Sans", sans-serif;
+  font-size: 200%;
+  padding: 10px;
+  margin: auto;
+  text-shadow: 0.5px 0.5px #666465;
+  transition: 0.5s;
+  opacity: 1;
+  visibility: visible;
+}
+.top-content .alert {
+  margin: 0;
+  text-align: center;
+}
+.top-content .alert span.jb-alert {
+  font-family: "Work Sans", sans-serif;
+}
+.top-content .header-image-container {
+  position: relative;
+  grid-area: banner;
+  background-image: url("../images/chris-lawton-city.jpeg");
+  background-size: cover;
+  width: 100%;
+  min-height: 600px;
+  min-width: 320px;
+  border-top: #2B2B2B 1px solid;
+}
+.top-content .header-image-container .title-quip {
+  position: absolute;
+  top: 15%;
+  left: 2.5%;
+}
+.top-content .header-image-container .title-quip p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 600%;
+  text-shadow: 3px 3px #666465;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .top-content .header-image-container {
+    min-height: 400px;
+  }
+}
+@media (max-width: 1068px) {
+  .top-content .header-image-container .title-quip p {
+    font-family: "Work Sans", sans-serif;
+    font-size: 550%;
+    text-shadow: 3px 3px #666465;
+    color: white;
+  }
+}
+@media (max-width: 818px) {
+  .top-content .header-image-container .title-quip p {
+    font-size: 500%;
+  }
+}
+@media (max-width: 745px) {
+  .top-content .header-image-container {
+    min-height: 300px;
+  }
+}
+@media (max-width: 725px) {
+  .top-content .header-image-container .title-quip p {
+    font-family: "Work Sans", sans-serif;
+    font-size: 450%;
+    text-shadow: 3px 3px #666465;
+    color: white;
+  }
+}
+@media (max-width: 650px) {
+  .top-content .header-image-container .title-quip p {
+    font-family: "Work Sans", sans-serif;
+    font-size: 400%;
+    text-shadow: 3px 3px #666465;
+    color: white;
+  }
+}
+@media (max-width: 600px) {
+  .top-content .header-image-container {
+    min-height: 200px;
+  }
+  .top-content .change nav ul {
+    position: static;
+    display: block;
+  }
+}
+@media (max-width: 575px) {
+  .top-content .header-image-container .title-quip {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .top-content .header-image-container {
+    min-height: 150px;
+  }
+}
+.content-wrapper {
+  min-width: 320px;
+  grid-area: wrapper;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto 2fr 1fr;
+  grid-template-areas: "title  title" "form   summary" "gallery gallery" "gallery gallery";
+  grid-gap: 2.5%;
+}
+.content-wrapper h2 {
+  color: #2B2B2B;
+  grid-area: title;
+  font-size: 300%;
+  margin: 0 auto;
+  font-family: "Work Sans", sans-serif;
+}
+.content-wrapper form {
+  grid-area: form;
+}
+.content-wrapper form label {
+  color: #2B2B2B;
+  font-family: "Work Sans", sans-serif;
+}
+.content-wrapper form input {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 3%;
+}
+.content-wrapper form .title-select .form-check label {
+  font-family: "Roboto", sans-serif;
+  margin-right: 5%;
+}
+.content-wrapper form .newsletter-select .formTitle {
+  margin-bottom: 2.5%;
+}
+.content-wrapper form .newsletter-select .form-check label {
+  color: #2B2B2B;
+  font-family: "Roboto", sans-serif;
+}
+.content-wrapper form .btn-primary {
+  color: #8a6d3b;
+  background-color: #FCF8E3;
+  border-color: #D9CDAF;
+  font-family: "Work Sans", sans-serif;
+}
+.content-wrapper form .btn-primary:active {
+  color: white;
+  background-color: #D9CDAF;
+  border-color: #D9CDAF;
+  font-family: "Work Sans", sans-serif;
+}
+.content-wrapper .summary-content {
+  grid-area: summary;
+  margin: 2.5% 0;
+}
+.content-wrapper .summary-content p {
+  color: #2B2B2B;
+  font-family: "Roboto", sans-serif;
+  line-height: 145%;
+}
+.content-wrapper .summary-content p strong {
+  font-family: "Work Sans", sans-serif;
+}
+.content-wrapper .gallery {
+  grid-area: gallery;
+  display: flex;
+  margin-bottom: 5%;
+}
+.content-wrapper .gallery .large {
+  width: 60%;
+  border-right: solid white 5px;
+}
+.content-wrapper .gallery .large img {
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.content-wrapper .gallery .column {
+  height: 100%;
+  width: 40%;
+}
+.content-wrapper .gallery .column .medium {
+  height: 60%;
+  border-bottom: solid white 5px;
+}
+.content-wrapper .gallery .column .medium img {
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.content-wrapper .gallery .column .small {
+  height: 40%;
+}
+.content-wrapper .gallery .column .small img {
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.content-wrapper .gallery img {
+  transition: transform 0.2s;
+}
+.content-wrapper .gallery .image1:hover,
+.content-wrapper .gallery .image2:hover,
+.content-wrapper .gallery .image3:hover,
+.content-wrapper .gallery .image1:active,
+.content-wrapper .gallery .image2:active,
+.content-wrapper .gallery .image3:active {
+  transform: scale(1.01);
+}
+
+@media (max-width: 1417px) {
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto 2fr 1fr;
+    grid-template-areas: "title  title" "summary summary" "form   form" "gallery gallery" "gallery gallery";
+  }
+}
+@media (max-width: 430px) {
+  .content-wrapper {
+    grid-column-gap: 5%;
+  }
+  .content-wrapper .gallery {
+    display: block;
+  }
+  .content-wrapper .gallery .large {
+    width: auto;
+    border-right: none;
+  }
+  .content-wrapper .gallery .large img {
+    object-fit: cover;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  .content-wrapper .gallery .column {
+    display: flex;
+    height: auto;
+    width: auto;
+  }
+  .content-wrapper .gallery .column .medium {
+    height: 60%;
+    border-bottom: none;
+    border-right: solid white 5px;
+  }
+  .content-wrapper .gallery .column .medium img {
+    object-fit: cover;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  .content-wrapper .gallery .column .small {
+    height: 40%;
+  }
+  .content-wrapper .gallery .column .small img {
+    object-fit: cover;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .content-wrapper {
+    padding: 5%;
+  }
+}
+footer {
+  margin-top: 5%;
+  grid-area: footer;
+  background-color: #666465;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 0.25fr;
+  grid-template-areas: "products   resources   company     social" "contact    contact     terms       terms";
+  padding: 5%;
+  grid-row-gap: 15%;
+}
+footer nav .title {
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  font-size: 125%;
+  padding-bottom: 5%;
+}
+footer nav ul li, footer .contact .contact-info {
+  padding-bottom: 2.5%;
+}
+footer nav ul li a,
+footer nav ul li .terms p a, footer .contact .contact-info a,
+footer .contact .contact-info .terms p a {
+  color: #bdb9ba;
+  font-family: "Roboto", sans-serif;
+  font-size: 75%;
+}
+footer nav ul li a:hover,
+footer nav ul li a:active, footer .contact .contact-info a:hover,
+footer .contact .contact-info a:active {
+  text-decoration: none;
+  color: #D9CDAF;
+}
+footer nav ul li i, footer .contact .contact-info i {
+  font-size: 200%;
+  margin-right: 10%;
+}
+footer .contact-info {
+  font-size: 100%;
+}
+footer .terms p a:hover,
+footer .terms p a:active {
+  text-decoration: none;
+  color: #D9CDAF;
+}
+footer .products {
+  grid-area: products;
+  margin: 0 auto;
+}
+footer .resources {
+  grid-area: resources;
+  margin: 0 auto;
+}
+footer .company {
+  grid-area: company;
+  margin: 0 auto;
+}
+footer .social-media {
+  grid-area: social;
+  margin: 0 auto;
+}
+footer .contact {
+  grid-area: contact;
+  margin: auto;
+}
+footer .contact .contact-info {
+  color: #bdb9ba;
+  font-family: "Roboto", sans-serif;
+  font-size: 75%;
+}
+footer .terms {
+  grid-area: terms;
+  margin: auto;
+}
+footer .terms p a {
+  grid-area: terms;
+  color: #bdb9ba;
+  font-family: "Roboto", sans-serif;
+  font-size: 75%;
+}
+footer .terms p a:hover,
+footer .terms p a:active {
+  text-decoration: none;
+  color: #D9CDAF;
+}
+
+@media (max-width: 1025px) {
+  footer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: ".      resources       social          ." ".      products        company         ." "contact    contact     terms       terms";
+    grid-row-gap: 10%;
+  }
+}
+@media (max-width: 875px) {
+  footer {
+    margin-top: 10%;
+  }
+}
+@media (max-width: 600px) {
+  footer {
+    grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
+    grid-template-rows: 1fr 1fr 0.25fr;
+    grid-template-areas: ".      resources       social          ." ".      products        company         ." "contact    contact     terms       terms";
+    grid-row-gap: 10%;
+  }
+}
+@media (max-width: 370px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 0.25fr;
+    grid-template-areas: " resources       social " " products        company " " contact         terms";
+    grid-row-gap: 10%;
+  }
+}
+.validation-wrapper {
+  grid-area: wrapper;
+}
+.validation-wrapper .thank-you {
+  color: #2B2B2B;
+  grid-area: title;
+  font-size: 300%;
+  margin: 0 auto;
+  font-family: "Work Sans", sans-serif;
+  padding-bottom: 5%;
+}
+.validation-wrapper p {
+  color: #2B2B2B;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+.validation-wrapper .alert .jb-alert strong {
+  font-family: "Work Sans", sans-serif;
+}
+.validation-wrapper .alert .jb-alert ul {
+  font-family: "Roboto", sans-serif;
+  margin-left: 5%;
+  list-style-type: disc;
+}
+.validation-wrapper .alert .jb-alert ul li {
+  margin-bottom: 2%;
+}
+.validation-wrapper ul {
+  list-style-type: disc;
+  font-family: "Roboto", sans-serif;
+  margin: 5% 0 5% 5%;
+}
+.validation-wrapper .gallery {
+  grid-area: gallery;
+  display: flex;
+  margin-top: 15%;
+}
+.validation-wrapper .gallery .large {
+  width: 60%;
+  border-right: solid white 5px;
+}
+.validation-wrapper .gallery .large img {
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.validation-wrapper .gallery .column {
+  height: 100%;
+  width: 40%;
+}
+.validation-wrapper .gallery .column .medium {
+  height: 60%;
+  border-bottom: solid white 5px;
+}
+.validation-wrapper .gallery .column .medium img {
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.validation-wrapper .gallery .column .small {
+  height: 40%;
+}
+.validation-wrapper .gallery .column .small img {
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.validation-wrapper .gallery img {
+  transition: transform 0.2s;
+}
+.validation-wrapper .gallery .image1:hover, .validation-wrapper .gallery .image2:hover, .validation-wrapper .gallery .image3:hover {
+  transform: scale(1.01);
+}
+
+/*# sourceMappingURL=styles.css.map */

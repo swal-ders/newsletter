@@ -1,0 +1,191 @@
+.content-wrapper{
+    min-width: 320px;
+    grid-area: wrapper;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 2fr 1fr; 
+    grid-template-areas:
+    'title  title' 
+    'form   summary'
+    'gallery gallery'
+    'gallery gallery';
+    grid-gap: 2.5%;
+    h2{
+        color: #2B2B2B;
+        grid-area: title;
+        font-size: 300%;
+        margin: 0 auto;
+        font-family: 'Work Sans', sans-serif;
+    }
+    form{
+        grid-area: form;
+        label{
+            color: #2B2B2B;
+            font-family: 'Work Sans', sans-serif;
+        }
+        input {
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 3%;
+        }
+        .title-select{
+            .form-check {
+                label{
+                font-family: 'Roboto', sans-serif;
+                margin-right: 5%;
+                }
+            }
+        }
+        .newsletter-select{
+            .formTitle{
+                margin-bottom: 2.5%;
+            }
+            .form-check {
+                label{
+                color: #2B2B2B;                
+                font-family: 'Roboto', sans-serif;
+                }
+            }
+        }
+        .btn-primary{
+            color: #8a6d3b;
+            background-color: #FCF8E3;
+            border-color: #D9CDAF;
+            font-family: 'Work Sans', sans-serif;
+        }
+        .btn-primary:active{
+        color: white;
+        background-color: #D9CDAF;
+        border-color: #D9CDAF;
+        font-family: 'Work Sans', sans-serif;
+        }
+    }
+    .summary-content{
+        grid-area: summary;
+        margin: 2.5% 0;
+        p{  
+            color: #2B2B2B;
+            font-family: 'Roboto', sans-serif;
+            line-height: 145%;
+            strong{
+                font-family: 'Work Sans', sans-serif;
+            }
+        }
+    }
+    .gallery {
+        grid-area: gallery;
+        display: flex;
+        margin-bottom: 5%;
+
+        .large{
+            width: 60%;
+            border-right: solid white 5px;
+
+            img{
+                object-fit: cover;
+                overflow: hidden;
+                height: 100%;
+                width: 100%;        
+            }
+        }
+
+        .column {
+            height: 100%;
+            width: 40%;
+    
+            .medium{
+                height: 60%;
+                border-bottom: solid white 5px;
+
+                img{
+                    object-fit: cover;
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;   
+                }
+            }
+            .small{
+                height: 40%;
+                img{
+                    object-fit: cover;
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;  
+                }
+            }
+        }
+        img{
+            transition: transform .2s;
+        }
+        .image1:hover,
+        .image2:hover,
+        .image3:hover,
+        .image1:active,
+        .image2:active,
+        .image3:active,{
+            transform: scale(1.01);
+        }
+    }
+}
+@media (max-width: 1417px){
+    .content-wrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto auto 2fr 1fr; 
+        grid-template-areas:
+        'title  title' 
+        'summary summary'
+        'form   form'
+        'gallery gallery'
+        'gallery gallery';
+    }
+}
+@media (max-width: 430px){
+    .content-wrapper{
+        grid-column-gap: 5%;
+        .gallery {
+            display: block;
+            .large{
+                width: auto;
+                border-right: none;
+                img{
+                    object-fit: cover;
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;        
+                }
+            }
+            .column {
+                display: flex;
+                height: auto;
+                width: auto;
+                .medium{
+                    height: 60%;
+                    border-bottom: none;
+                    border-right: solid white 5px;
+                    img{
+
+                        object-fit: cover;
+                        overflow: hidden;
+                        height: 100%;
+                        width: 100%;   
+                    }
+                }
+                .small{
+                    height: 40%;
+                    img{
+
+                        object-fit: cover;
+                        overflow: hidden;
+                        height: 100%;
+                        width: 100%;  
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 400px){
+    .content-wrapper{
+        padding: 5%;
+    }
+}
